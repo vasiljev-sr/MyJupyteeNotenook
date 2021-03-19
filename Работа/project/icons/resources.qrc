@@ -1,12 +1,5 @@
 <RCC>
-  <qresource prefix="res_files">
-    <file>toggle_icon.png</file>
-    <file>icon_curr.png</file>
-    <file>prev_mon.png</file>
-    <file>menu.png</file>
-    <file>select.png</file>
-    <file>vesi.png</file>
-    <file>vlazhn.png</file>
-    <file>gear.png</file>
+  <qresource prefix="resources">
+    <file>resources.qrc</file>
   </qresource>
 </RCC>

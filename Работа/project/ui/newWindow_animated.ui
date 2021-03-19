@@ -144,7 +144,7 @@ QPushButton:pressed {
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-image: url(:/res_files/menu.png);
+             <string notr="true">background-image: url(:/resources/menu.png);
 background-repeat:none;
 background-position: center ;
 </string>
@@ -306,7 +306,7 @@ QPushButton:pressed {
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-image: url(:/res_files/icon_curr.png);
+                <string notr="true">background-image: url(:/resources/icon_curr.png);
 background-repeat:none;
 padding-left: 30px;
 background-position: center left;
@@ -332,7 +332,7 @@ background-position: center left;
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-image: url(:/res_files/prev_mon.png);
+                <string notr="true">background-image: url(:/resources/prev_mon.png);
 background-repeat:none;
 padding-left: 30px;
 background-position: center left;
@@ -352,7 +352,7 @@ background-position: center left;
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-image: url(:/res_files/select.png);
+                <string notr="true">background-image: url(:/resources/select.png);
 background-repeat:none;
 padding-left: 30px;
 background-position: center left;
@@ -372,7 +372,7 @@ background-position: center left;
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-image: url(:/res_files/gear.png);
+                <string notr="true">background-image: url(:/resources/gear.png);
 background-repeat:none;
 padding-left: 30px;
 background-position: center left;
@@ -456,7 +456,18 @@ background-position: center left;
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(45, 45, 45);</string>
+                 <string notr="true">QFrame{
+	border-style: solid;
+    border-width: 0px;
+	border-color: #2d2d2d;
+}
+
+QDateEdit: calendarPopup{
+	background-color: #ffffff;
+    color: #1e2027;
+}
+
+</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
@@ -560,8 +571,8 @@ background-position: center left;
                         <minute>0</minute>
                         <second>0</second>
                         <year>2021</year>
-                        <month>9</month>
-                        <day>14</day>
+                        <month>1</month>
+                        <day>1</day>
                        </datetime>
                       </property>
                       <property name="minimumDate">
@@ -642,12 +653,12 @@ background-position: center left;
                       </property>
                       <property name="dateTime">
                        <datetime>
-                        <hour>0</hour>
-                        <minute>0</minute>
-                        <second>0</second>
+                        <hour>23</hour>
+                        <minute>59</minute>
+                        <second>59</second>
                         <year>2021</year>
-                        <month>9</month>
-                        <day>15</day>
+                        <month>1</month>
+                        <day>2</day>
                        </datetime>
                       </property>
                       <property name="minimumDate">
@@ -659,9 +670,16 @@ background-position: center left;
                       </property>
                       <property name="maximumTime">
                        <time>
-                        <hour>0</hour>
-                        <minute>0</minute>
-                        <second>0</second>
+                        <hour>23</hour>
+                        <minute>59</minute>
+                        <second>59</second>
+                       </time>
+                      </property>
+                      <property name="minimumTime">
+                       <time>
+                        <hour>23</hour>
+                        <minute>59</minute>
+                        <second>59</second>
                        </time>
                       </property>
                       <property name="calendarPopup">
@@ -670,8 +688,8 @@ background-position: center left;
                       <property name="date">
                        <date>
                         <year>2021</year>
-                        <month>9</month>
-                        <day>15</day>
+                        <month>1</month>
+                        <day>2</day>
                        </date>
                       </property>
                      </widget>
@@ -1333,8 +1351,222 @@ background-color: rgb(45, 45, 45);</string>
             </widget>
             <widget class="QWidget" name="params_page">
              <layout class="QVBoxLayout" name="verticalLayout_13">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
-               <widget class="QFrame" name="frame_7">
+               <widget class="QFrame" name="top_params_frame">
+                <property name="minimumSize">
+                 <size>
+                  <width>200</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+	background-color: rgb(85, 255, 255);
+                                         
+    background-color: #2d2d2d;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  14px;
+    padding: px 0px;
+    color:  #ffffff;
+}
+
+QLabel:hover {
+    background:  #232323;
+    color: #ff5533;
+} 
+QLabel:pressed {                              
+   background:#2d2d2d;
+   border-style: solid; 
+   color:#ff5533;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_9">
+                   <property name="styleSheet">
+                    <string notr="true">QSlider::groove:horizontal {
+    border-radius: 1px solid #ff5533;       
+    height: 8px;              
+    background: #ff5533;   
+	margin: 2px 0       
+}
+QSlider::handle:horizontal {
+   
+	background-color: rgb(45, 45, 45);
+    border: 1px solid #ffffff;  
+    width: 18px;
+    margin: -2px 0;     
+    border-radius: 7px  ;
+     
+}
+QSlider::add-page:horizontal {
+    background: #ff5533;
+}
+QSlider::sub-page:horizontal {
+    background: #ffffff;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="update_freq">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>201</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-image: url(:/resources/time.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                    </property>
+                    <property name="text">
+                     <string>Частота обновления: 5</string>
+                    </property>
+                   </widget>
+                   <widget class="QSlider" name="time_slider">
+                    <property name="geometry">
+                     <rect>
+                      <x>230</x>
+                      <y>17</y>
+                      <width>160</width>
+                      <height>19</height>
+                     </rect>
+                    </property>
+                    <property name="minimum">
+                     <number>5</number>
+                    </property>
+                    <property name="maximum">
+                     <number>10</number>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="tickPosition">
+                     <enum>QSlider::TicksAbove</enum>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignRight">
+                  <widget class="QFrame" name="frame_10">
+                   <property name="minimumSize">
+                    <size>
+                     <width>150</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+                                         
+    background-color: #ff5533;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  16px;
+    min-width: 5em;
+    padding: 0px;
+    color: #1e2027;
+}
+QPushButton:hover {
+    background: #262a2f; 
+    color:#ff5533;
+} 
+QPushButton:pressed {                              
+   background: #262a2f;
+   border-style: solid; 
+   color:#ff5533;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_16">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>30</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="main_params_frame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1406,6 +1638,7 @@ background-color: rgb(45, 45, 45);</string>
                          </property>
                          <property name="font">
                           <font>
+                           <family>Courier</family>
                            <pointsize>14</pointsize>
                            <weight>50</weight>
                            <italic>false</italic>
@@ -1439,29 +1672,23 @@ QLabel:hover {
 	border-color: #2d2d2d;
 }
 
-
 QLabel {
-	background-color: rgb(85, 255, 255);
-                                         
+	background-color: rgb(85, 255, 255);                                     
     background-color: #2d2d2d;
     border-style: solid;
     border-width: 0px;
     border-radius: 0px;
     border-color: #ff5533;
     font:  14px;
-    padding: 10px 0px;
-    color:  #ff5533;
+    padding: px 0px;
+    color:  #ffffff;
 }
 
 QLabel:hover {
     background:  #232323;
     color: #ff5533;
 } 
-QLabel:pressed {                              
-   background:#2d2d2d;
-   border-style: solid; 
-   color:#ff5533;
-}</string>
+</string>
                       </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
@@ -1469,12 +1696,12 @@ QLabel:pressed {
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <widget class="QLabel" name="om1_ves_label">
+                      <widget class="QLabel" name="om1_ves">
                        <property name="geometry">
                         <rect>
                          <x>10</x>
                          <y>10</y>
-                         <width>150</width>
+                         <width>200</width>
                          <height>31</height>
                         </rect>
                        </property>
@@ -1485,21 +1712,21 @@ QLabel:pressed {
                         </sizepolicy>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">background-image: url(:/res_files/vesi.png);
+                        <string notr="true">background-image: url(:/resources/vesi.png);
 background-repeat:none;
 padding-left: 30px;
 background-position: center left;</string>
                        </property>
                        <property name="text">
-                        <string>Вес: 152</string>
+                        <string>Вес: </string>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="om1_vlazh_label">
+                      <widget class="QLabel" name="om1_vlazh">
                        <property name="geometry">
                         <rect>
                          <x>10</x>
-                         <y>50</y>
-                         <width>150</width>
+                         <y>40</y>
+                         <width>200</width>
                          <height>31</height>
                         </rect>
                        </property>
@@ -1516,26 +1743,38 @@ background-position: center left;</string>
                         </size>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">background-image: url(:/res_files/vlazhn.png);
+                        <string notr="true">background-image: url(:/resources/vlazhn.png);
 background-repeat:none;
 padding-left: 30px;
 background-position: center left;</string>
                        </property>
                        <property name="text">
-                        <string>Влажность: 52</string>
+                        <string>Влажность: </string>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="label_3">
+                      <widget class="QLabel" name="om1_speed">
                        <property name="geometry">
                         <rect>
                          <x>10</x>
-                         <y>90</y>
-                         <width>81</width>
+                         <y>70</y>
+                         <width>200</width>
                          <height>31</height>
                         </rect>
                        </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/speed.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
                        <property name="text">
-                        <string>TextLabel</string>
+                        <string>Скорость</string>
                        </property>
                       </widget>
                      </widget>
@@ -1559,7 +1798,7 @@ background-position: center left;</string>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_18">
+                   <layout class="QVBoxLayout" name="verticalLayout_19">
                     <property name="spacing">
                      <number>0</number>
                     </property>
@@ -1596,7 +1835,7 @@ background-position: center left;</string>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_17">
+                      <layout class="QVBoxLayout" name="verticalLayout_20">
                        <item>
                         <widget class="QLabel" name="om2_legend">
                          <property name="maximumSize">
@@ -1607,6 +1846,7 @@ background-position: center left;</string>
                          </property>
                          <property name="font">
                           <font>
+                           <family>Courier</family>
                            <pointsize>14</pointsize>
                            <weight>50</weight>
                            <italic>false</italic>
@@ -1624,7 +1864,7 @@ QLabel:hover {
 } </string>
                          </property>
                          <property name="text">
-                          <string>Параметры ОМ1</string>
+                          <string>Параметры ОМ2</string>
                          </property>
                         </widget>
                        </item>
@@ -1632,7 +1872,7 @@ QLabel:hover {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QFrame" name="om1_params_frame_2">
+                     <widget class="QFrame" name="om2_params_frame">
                       <property name="styleSheet">
                        <string notr="true">QFrame{
 	border-style: solid;
@@ -1650,8 +1890,8 @@ QLabel {
     border-radius: 0px;
     border-color: #ff5533;
     font:  14px;
-    padding: 10px 0px;
-    color:  #ff5533;
+    padding: px 0px;
+    color:  #ffffff;
 }
 
 QLabel:hover {
@@ -1670,12 +1910,12 @@ QLabel:pressed {
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <widget class="QLabel" name="om2_ves_label">
+                      <widget class="QLabel" name="om2_ves">
                        <property name="geometry">
                         <rect>
                          <x>10</x>
                          <y>10</y>
-                         <width>150</width>
+                         <width>200</width>
                          <height>31</height>
                         </rect>
                        </property>
@@ -1686,21 +1926,21 @@ QLabel:pressed {
                         </sizepolicy>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">background-image: url(:/res_files/vesi.png);
+                        <string notr="true">background-image: url(:/resources/vesi.png);
 background-repeat:none;
 padding-left: 30px;
 background-position: center left;</string>
                        </property>
                        <property name="text">
-                        <string>Вес: 152</string>
+                        <string>Вес: </string>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="om2_vlazh_label">
+                      <widget class="QLabel" name="om2_vlazh">
                        <property name="geometry">
                         <rect>
                          <x>10</x>
-                         <y>50</y>
-                         <width>150</width>
+                         <y>40</y>
+                         <width>200</width>
                          <height>31</height>
                         </rect>
                        </property>
@@ -1717,26 +1957,38 @@ background-position: center left;</string>
                         </size>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">background-image: url(:/res_files/vlazhn.png);
+                        <string notr="true">background-image: url(:/resources/vlazhn.png);
 background-repeat:none;
 padding-left: 30px;
 background-position: center left;</string>
                        </property>
                        <property name="text">
-                        <string>Влажность: 52</string>
+                        <string>Влажность: </string>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="label_5">
+                      <widget class="QLabel" name="om2_speed">
                        <property name="geometry">
                         <rect>
                          <x>10</x>
-                         <y>200</y>
-                         <width>81</width>
+                         <y>70</y>
+                         <width>200</width>
                          <height>31</height>
                         </rect>
                        </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/speed.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
                        <property name="text">
-                        <string>TextLabel</string>
+                        <string>Скорость</string>
                        </property>
                       </widget>
                      </widget>
@@ -1745,13 +1997,14 @@ background-position: center left;</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="om3_frame">
+                  <widget class="QFrame" name="om4_frame">
                    <property name="styleSheet">
                     <string notr="true">QFrame{
 	border-style: solid;
     border-width: 2px;
 	border-color: #ff5533;
-}</string>
+}
+</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -1759,6 +2012,202 @@ background-position: center left;</string>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_18">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item alignment="Qt::AlignHCenter">
+                     <widget class="QFrame" name="om4_frame_legend">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>60</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
+	border-style: solid;
+    border-width: 0px;
+	border-color: #2d2d2d;
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_17">
+                       <item>
+                        <widget class="QLabel" name="om4_legend">
+                         <property name="maximumSize">
+                          <size>
+                           <width>500</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Courier</family>
+                           <pointsize>14</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QLabel {
+    color:  #ffffff;
+}
+
+QLabel:hover {
+
+    color: #ff5533;
+} </string>
+                         </property>
+                         <property name="text">
+                          <string>Параметры ОМ4</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="om4_params_frame">
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
+	border-style: solid;
+    border-width: 0px;
+	border-color: #2d2d2d;
+}
+
+
+QLabel {
+	background-color: rgb(85, 255, 255);
+                                         
+    background-color: #2d2d2d;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  14px;
+    padding: px 0px;
+    color:  #ffffff;
+}
+
+QLabel:hover {
+    background:  #232323;
+    color: #ff5533;
+} 
+QLabel:pressed {                              
+   background:#2d2d2d;
+   border-style: solid; 
+   color:#ff5533;
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QLabel" name="om4_ves">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>200</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/vesi.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
+                       <property name="text">
+                        <string>Вес: </string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="om4_vlazh">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>40</y>
+                         <width>200</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/vlazhn.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
+                       <property name="text">
+                        <string>Влажность:</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="om4_speed">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>70</y>
+                         <width>200</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/speed.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
+                       <property name="text">
+                        <string>Скорость</string>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>
@@ -1774,13 +2223,14 @@ background-position: center left;</string>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_10">
                  <item>
-                  <widget class="QFrame" name="om4_params_frame">
+                  <widget class="QFrame" name="om5_frame">
                    <property name="styleSheet">
                     <string notr="true">QFrame{
 	border-style: solid;
     border-width: 2px;
 	border-color: #ff5533;
-}</string>
+}
+</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -1788,16 +2238,213 @@ background-position: center left;</string>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_23">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item alignment="Qt::AlignHCenter">
+                     <widget class="QFrame" name="om5_frame_legend">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>60</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
+	border-style: solid;
+    border-width: 0px;
+	border-color: #2d2d2d;
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_24">
+                       <item>
+                        <widget class="QLabel" name="om5_legend">
+                         <property name="maximumSize">
+                          <size>
+                           <width>500</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Courier</family>
+                           <pointsize>14</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QLabel {
+    color:  #ffffff;
+}
+
+QLabel:hover {
+
+    color: #ff5533;
+} </string>
+                         </property>
+                         <property name="text">
+                          <string>Параметры ОМ5</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="om5_params_frame">
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
+	border-style: solid;
+    border-width: 0px;
+	border-color: #2d2d2d;
+}
+
+
+QLabel {
+	background-color: rgb(85, 255, 255);
+                                         
+    background-color: #2d2d2d;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  14px;
+    padding: px 0px;
+    color:  #ffffff;
+}
+
+QLabel:hover {
+    background:  #232323;
+    color: #ff5533;
+} 
+QLabel:pressed {                              
+   background:#2d2d2d;
+   border-style: solid; 
+   color:#ff5533;
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QLabel" name="om5_ves">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>200</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/vesi.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
+                       <property name="text">
+                        <string>Вес: </string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="om5_vlazh">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>40</y>
+                         <width>200</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/vlazhn.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
+                       <property name="text">
+                        <string>Влажность: </string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="om5_speed">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>70</y>
+                         <width>200</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/speed.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
+                       <property name="text">
+                        <string>Скорость</string>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="om5_params_frame">
+                  <widget class="QFrame" name="om6_frame">
                    <property name="styleSheet">
                     <string notr="true">QFrame{
 	border-style: solid;
     border-width: 2px;
 	border-color: #ff5533;
-}</string>
+}
+</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -1805,23 +2452,202 @@ background-position: center left;</string>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="om6_params_frame">
-                   <property name="styleSheet">
-                    <string notr="true">QFrame{
+                   <layout class="QVBoxLayout" name="verticalLayout_21">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item alignment="Qt::AlignHCenter">
+                     <widget class="QFrame" name="om6_frame_legend">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>60</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
 	border-style: solid;
-    border-width: 2px;
-	border-color: #ff5533;
+    border-width: 0px;
+	border-color: #2d2d2d;
 }</string>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_22">
+                       <item>
+                        <widget class="QLabel" name="om6_legend">
+                         <property name="maximumSize">
+                          <size>
+                           <width>500</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Courier</family>
+                           <pointsize>14</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QLabel {
+    color:  #ffffff;
+}
+
+QLabel:hover {
+
+    color: #ff5533;
+} </string>
+                         </property>
+                         <property name="text">
+                          <string>Параметры ОМ6</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="om6_params_frame">
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
+	border-style: solid;
+    border-width: 0px;
+	border-color: #2d2d2d;
+}
+
+
+QLabel {
+	background-color: rgb(85, 255, 255);
+                                         
+    background-color: #2d2d2d;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 0px;
+    border-color: #ff5533;
+    font:  14px;
+    padding: px 0px;
+    color:  #ffffff;
+}
+
+QLabel:hover {
+    background:  #232323;
+    color: #ff5533;
+} 
+QLabel:pressed {                              
+   background:#2d2d2d;
+   border-style: solid; 
+   color:#ff5533;
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QLabel" name="om6_ves">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>200</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/vesi.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
+                       <property name="text">
+                        <string>Вес: </string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="om6_vlazh">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>40</y>
+                         <width>200</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/vlazhn.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
+                       <property name="text">
+                        <string>Влажность: </string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="om6_speed">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>70</y>
+                         <width>200</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-image: url(:/resources/speed.png);
+background-repeat:none;
+padding-left: 30px;
+background-position: center left;</string>
+                       </property>
+                       <property name="text">
+                        <string>Скорость</string>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>
@@ -1841,8 +2667,7 @@ background-position: center left;</string>
   </widget>
  </widget>
  <resources>
-  <include location="res_files.qrc"/>
-  <include location="../icons/res_files.qrc"/>
+  <include location="../../../../MyJupyterNotebook/Работа/project/icons/resources_new.qrc"/>
  </resources>
  <connections/>
 </ui>

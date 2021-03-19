@@ -1,12 +1,13 @@
 <RCC>
   <qresource prefix="resources">
-    <file>toggle_icon.png</file>
+    <file>gear.png</file>
     <file>icon_curr.png</file>
-    <file>prev_mon.png</file>
+    <file>speed.png</file>
+    <file>time.png</file>
     <file>menu.png</file>
+    <file>prev_mon.png</file>
     <file>select.png</file>
     <file>vesi.png</file>
     <file>vlazhn.png</file>
-    <file>gear.png</file>
   </qresource>
 </RCC>

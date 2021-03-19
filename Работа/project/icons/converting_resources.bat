@@ -1,1 +1,1 @@
-pyrcc5 -o C:\Users\home\Desktop\MyJupyterNotebook\Работа\project\icons\resources.py C:\Users\home\Desktop\MyJupyterNotebook\Работа\project\icons\resources.qrc
+pyrcc5 -o C:\Users\Admin\Desktop\gitlab\time_stop_machine\project\resources.py C:\Users\Admin\Desktop\gitlab\time_stop_machine\project\icons\resources_new.qrc

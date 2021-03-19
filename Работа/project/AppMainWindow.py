@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\home\Desktop\MyJupyterNotebook\Работа\project\ui\newWindow_animated.ui'
+# Form implementation generated from reading ui file 'C:\Users\Admin\Desktop\gitlab\time_stop_machine\project\ui\newWindow_animated.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -10,6 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import resources
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -74,7 +75,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btn_toggle.sizePolicy().hasHeightForWidth())
         self.btn_toggle.setSizePolicy(sizePolicy)
-        self.btn_toggle.setStyleSheet("background-image: url(:/res_files/menu.png);\n"
+        self.btn_toggle.setStyleSheet("background-image: url(:/resources/menu.png);\n"
 "background-repeat:none;\n"
 "background-position: center ;\n"
 "")
@@ -145,7 +146,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.btn_cur_mon = QtWidgets.QPushButton(self.frame_top_menus)
         self.btn_cur_mon.setMinimumSize(QtCore.QSize(150, 40))
-        self.btn_cur_mon.setStyleSheet("background-image: url(:/res_files/icon_curr.png);\n"
+        self.btn_cur_mon.setStyleSheet("background-image: url(:/resources/icon_curr.png);\n"
 "background-repeat:none;\n"
 "padding-left: 30px;\n"
 "background-position: center left;\n"
@@ -155,7 +156,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addWidget(self.btn_cur_mon)
         self.btn_prev_mon = QtWidgets.QPushButton(self.frame_top_menus)
         self.btn_prev_mon.setMinimumSize(QtCore.QSize(150, 40))
-        self.btn_prev_mon.setStyleSheet("background-image: url(:/res_files/prev_mon.png);\n"
+        self.btn_prev_mon.setStyleSheet("background-image: url(:/resources/prev_mon.png);\n"
 "background-repeat:none;\n"
 "padding-left: 30px;\n"
 "background-position: center left;\n"
@@ -164,7 +165,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addWidget(self.btn_prev_mon)
         self.btn_select_date = QtWidgets.QPushButton(self.frame_top_menus)
         self.btn_select_date.setMinimumSize(QtCore.QSize(150, 40))
-        self.btn_select_date.setStyleSheet("background-image: url(:/res_files/select.png);\n"
+        self.btn_select_date.setStyleSheet("background-image: url(:/resources/select.png);\n"
 "background-repeat:none;\n"
 "padding-left: 30px;\n"
 "background-position: center left;\n"
@@ -173,7 +174,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addWidget(self.btn_select_date)
         self.btn_params = QtWidgets.QPushButton(self.frame_top_menus)
         self.btn_params.setMinimumSize(QtCore.QSize(150, 40))
-        self.btn_params.setStyleSheet("background-image: url(:/res_files/gear.png);\n"
+        self.btn_params.setStyleSheet("background-image: url(:/resources/gear.png);\n"
 "background-repeat:none;\n"
 "padding-left: 30px;\n"
 "background-position: center left;\n"
@@ -202,7 +203,18 @@ class Ui_MainWindow(object):
         self.options_frame_selected = QtWidgets.QFrame(self.selected_data_page)
         self.options_frame_selected.setMinimumSize(QtCore.QSize(0, 40))
         self.options_frame_selected.setMaximumSize(QtCore.QSize(16777215, 40))
-        self.options_frame_selected.setStyleSheet("background-color: rgb(45, 45, 45);")
+        self.options_frame_selected.setStyleSheet("QFrame{\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-color: #2d2d2d;\n"
+"}\n"
+"\n"
+"QDateEdit: calendarPopup{\n"
+"    background-color: #ffffff;\n"
+"    color: #1e2027;\n"
+"}\n"
+"\n"
+"")
         self.options_frame_selected.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.options_frame_selected.setFrameShadow(QtWidgets.QFrame.Raised)
         self.options_frame_selected.setObjectName("options_frame_selected")
@@ -243,7 +255,7 @@ class Ui_MainWindow(object):
         self.date_in.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.date_in.setAccelerated(False)
         self.date_in.setProperty("showGroupSeparator", True)
-        self.date_in.setDateTime(QtCore.QDateTime(QtCore.QDate(2021, 9, 14), QtCore.QTime(0, 0, 0)))
+        self.date_in.setDateTime(QtCore.QDateTime(QtCore.QDate(2021, 1, 1), QtCore.QTime(0, 0, 0)))
         self.date_in.setMinimumDate(QtCore.QDate(2021, 1, 1))
         self.date_in.setMaximumTime(QtCore.QTime(0, 0, 0))
         self.date_in.setCalendarPopup(True)
@@ -277,11 +289,12 @@ class Ui_MainWindow(object):
         self.date_out.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.date_out.setAccelerated(False)
         self.date_out.setProperty("showGroupSeparator", True)
-        self.date_out.setDateTime(QtCore.QDateTime(QtCore.QDate(2021, 9, 15), QtCore.QTime(0, 0, 0)))
+        self.date_out.setDateTime(QtCore.QDateTime(QtCore.QDate(2021, 1, 2), QtCore.QTime(23, 59, 59)))
         self.date_out.setMinimumDate(QtCore.QDate(2021, 1, 1))
-        self.date_out.setMaximumTime(QtCore.QTime(0, 0, 0))
+        self.date_out.setMaximumTime(QtCore.QTime(23, 59, 59))
+        self.date_out.setMinimumTime(QtCore.QTime(23, 59, 59))
         self.date_out.setCalendarPopup(True)
-        self.date_out.setDate(QtCore.QDate(2021, 9, 15))
+        self.date_out.setDate(QtCore.QDate(2021, 1, 2))
         self.date_out.setObjectName("date_out")
         self.horizontalLayout_4.addWidget(self.date_out)
         self.horizontalLayout_3.addWidget(self.frame, 0, QtCore.Qt.AlignLeft)
@@ -559,14 +572,125 @@ class Ui_MainWindow(object):
         self.params_page = QtWidgets.QWidget()
         self.params_page.setObjectName("params_page")
         self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.params_page)
+        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_13.setSpacing(0)
         self.verticalLayout_13.setObjectName("verticalLayout_13")
-        self.frame_7 = QtWidgets.QFrame(self.params_page)
-        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_7.setObjectName("frame_7")
-        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.frame_7)
+        self.top_params_frame = QtWidgets.QFrame(self.params_page)
+        self.top_params_frame.setMinimumSize(QtCore.QSize(200, 40))
+        self.top_params_frame.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.top_params_frame.setStyleSheet("QLabel {\n"
+"    background-color: rgb(85, 255, 255);\n"
+"                                         \n"
+"    background-color: #2d2d2d;\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-radius: 0px;\n"
+"    border-color: #ff5533;\n"
+"    font:  14px;\n"
+"    padding: px 0px;\n"
+"    color:  #ffffff;\n"
+"}\n"
+"\n"
+"QLabel:hover {\n"
+"    background:  #232323;\n"
+"    color: #ff5533;\n"
+"} \n"
+"QLabel:pressed {                              \n"
+"   background:#2d2d2d;\n"
+"   border-style: solid; \n"
+"   color:#ff5533;\n"
+"}")
+        self.top_params_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.top_params_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.top_params_frame.setObjectName("top_params_frame")
+        self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.top_params_frame)
+        self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_11.setSpacing(0)
+        self.horizontalLayout_11.setObjectName("horizontalLayout_11")
+        self.frame_9 = QtWidgets.QFrame(self.top_params_frame)
+        self.frame_9.setStyleSheet("QSlider::groove:horizontal {\n"
+"    border-radius: 1px solid #ff5533;       \n"
+"    height: 8px;              \n"
+"    background: #ff5533;   \n"
+"    margin: 2px 0       \n"
+"}\n"
+"QSlider::handle:horizontal {\n"
+"   \n"
+"    background-color: rgb(45, 45, 45);\n"
+"    border: 1px solid #ffffff;  \n"
+"    width: 18px;\n"
+"    margin: -2px 0;     \n"
+"    border-radius: 7px  ;\n"
+"     \n"
+"}\n"
+"QSlider::add-page:horizontal {\n"
+"    background: #ff5533;\n"
+"}\n"
+"QSlider::sub-page:horizontal {\n"
+"    background: #ffffff;\n"
+"}")
+        self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_9.setObjectName("frame_9")
+        self.update_freq = QtWidgets.QLabel(self.frame_9)
+        self.update_freq.setGeometry(QtCore.QRect(10, 10, 201, 31))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.update_freq.sizePolicy().hasHeightForWidth())
+        self.update_freq.setSizePolicy(sizePolicy)
+        self.update_freq.setStyleSheet("background-image: url(:/resources/time.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.update_freq.setObjectName("update_freq")
+        self.time_slider = QtWidgets.QSlider(self.frame_9)
+        self.time_slider.setGeometry(QtCore.QRect(230, 17, 160, 19))
+        self.time_slider.setMinimum(5)
+        self.time_slider.setMaximum(10)
+        self.time_slider.setOrientation(QtCore.Qt.Horizontal)
+        self.time_slider.setTickPosition(QtWidgets.QSlider.TicksAbove)
+        self.time_slider.setObjectName("time_slider")
+        self.horizontalLayout_11.addWidget(self.frame_9)
+        self.frame_10 = QtWidgets.QFrame(self.top_params_frame)
+        self.frame_10.setMinimumSize(QtCore.QSize(150, 0))
+        self.frame_10.setStyleSheet("QPushButton {\n"
+"                                         \n"
+"    background-color: #ff5533;\n"
+"    border-style: solid;\n"
+"    border-width: 2px;\n"
+"    border-radius: 0px;\n"
+"    border-color: #ff5533;\n"
+"    font:  16px;\n"
+"    min-width: 5em;\n"
+"    padding: 0px;\n"
+"    color: #1e2027;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background: #262a2f; \n"
+"    color:#ff5533;\n"
+"} \n"
+"QPushButton:pressed {                              \n"
+"   background: #262a2f;\n"
+"   border-style: solid; \n"
+"   color:#ff5533;\n"
+"}")
+        self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_10.setObjectName("frame_10")
+        self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.frame_10)
+        self.verticalLayout_16.setContentsMargins(0, 0, 30, 0)
+        self.verticalLayout_16.setSpacing(0)
+        self.verticalLayout_16.setObjectName("verticalLayout_16")
+        self.horizontalLayout_11.addWidget(self.frame_10, 0, QtCore.Qt.AlignRight)
+        self.verticalLayout_13.addWidget(self.top_params_frame)
+        self.main_params_frame = QtWidgets.QFrame(self.params_page)
+        self.main_params_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.main_params_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.main_params_frame.setObjectName("main_params_frame")
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.main_params_frame)
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
-        self.om1_frame = QtWidgets.QFrame(self.frame_7)
+        self.om1_frame = QtWidgets.QFrame(self.main_params_frame)
         self.om1_frame.setStyleSheet("QFrame{\n"
 "    border-style: solid;\n"
 "    border-width: 2px;\n"
@@ -595,6 +719,7 @@ class Ui_MainWindow(object):
         self.om1_legend = QtWidgets.QLabel(self.om1_frame_legend)
         self.om1_legend.setMaximumSize(QtCore.QSize(500, 16777215))
         font = QtGui.QFont()
+        font.setFamily("Courier")
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
@@ -618,63 +743,62 @@ class Ui_MainWindow(object):
 "    border-color: #2d2d2d;\n"
 "}\n"
 "\n"
-"\n"
 "QLabel {\n"
-"    background-color: rgb(85, 255, 255);\n"
-"                                         \n"
+"    background-color: rgb(85, 255, 255);                                     \n"
 "    background-color: #2d2d2d;\n"
 "    border-style: solid;\n"
 "    border-width: 0px;\n"
 "    border-radius: 0px;\n"
 "    border-color: #ff5533;\n"
 "    font:  14px;\n"
-"    padding: 10px 0px;\n"
-"    color:  #ff5533;\n"
+"    padding: px 0px;\n"
+"    color:  #ffffff;\n"
 "}\n"
 "\n"
 "QLabel:hover {\n"
 "    background:  #232323;\n"
 "    color: #ff5533;\n"
 "} \n"
-"QLabel:pressed {                              \n"
-"   background:#2d2d2d;\n"
-"   border-style: solid; \n"
-"   color:#ff5533;\n"
-"}")
+"")
         self.om1_params_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.om1_params_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.om1_params_frame.setObjectName("om1_params_frame")
-        self.om1_ves_label = QtWidgets.QLabel(self.om1_params_frame)
-        self.om1_ves_label.setGeometry(QtCore.QRect(10, 10, 150, 31))
+        self.om1_ves = QtWidgets.QLabel(self.om1_params_frame)
+        self.om1_ves.setGeometry(QtCore.QRect(10, 10, 200, 31))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.om1_ves_label.sizePolicy().hasHeightForWidth())
-        self.om1_ves_label.setSizePolicy(sizePolicy)
-        self.om1_ves_label.setStyleSheet("background-image: url(:/res_files/vesi.png);\n"
+        sizePolicy.setHeightForWidth(self.om1_ves.sizePolicy().hasHeightForWidth())
+        self.om1_ves.setSizePolicy(sizePolicy)
+        self.om1_ves.setStyleSheet("background-image: url(:/resources/vesi.png);\n"
 "background-repeat:none;\n"
 "padding-left: 30px;\n"
 "background-position: center left;")
-        self.om1_ves_label.setObjectName("om1_ves_label")
-        self.om1_vlazh_label = QtWidgets.QLabel(self.om1_params_frame)
-        self.om1_vlazh_label.setGeometry(QtCore.QRect(10, 50, 150, 31))
+        self.om1_ves.setObjectName("om1_ves")
+        self.om1_vlazh = QtWidgets.QLabel(self.om1_params_frame)
+        self.om1_vlazh.setGeometry(QtCore.QRect(10, 40, 200, 31))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.om1_vlazh_label.sizePolicy().hasHeightForWidth())
-        self.om1_vlazh_label.setSizePolicy(sizePolicy)
-        self.om1_vlazh_label.setMinimumSize(QtCore.QSize(100, 25))
-        self.om1_vlazh_label.setStyleSheet("background-image: url(:/res_files/vlazhn.png);\n"
+        sizePolicy.setHeightForWidth(self.om1_vlazh.sizePolicy().hasHeightForWidth())
+        self.om1_vlazh.setSizePolicy(sizePolicy)
+        self.om1_vlazh.setMinimumSize(QtCore.QSize(100, 25))
+        self.om1_vlazh.setStyleSheet("background-image: url(:/resources/vlazhn.png);\n"
 "background-repeat:none;\n"
 "padding-left: 30px;\n"
 "background-position: center left;")
-        self.om1_vlazh_label.setObjectName("om1_vlazh_label")
-        self.label_3 = QtWidgets.QLabel(self.om1_params_frame)
-        self.label_3.setGeometry(QtCore.QRect(10, 90, 81, 31))
-        self.label_3.setObjectName("label_3")
+        self.om1_vlazh.setObjectName("om1_vlazh")
+        self.om1_speed = QtWidgets.QLabel(self.om1_params_frame)
+        self.om1_speed.setGeometry(QtCore.QRect(10, 70, 200, 31))
+        self.om1_speed.setMinimumSize(QtCore.QSize(100, 25))
+        self.om1_speed.setStyleSheet("background-image: url(:/resources/speed.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om1_speed.setObjectName("om1_speed")
         self.verticalLayout_14.addWidget(self.om1_params_frame)
         self.horizontalLayout_9.addWidget(self.om1_frame)
-        self.om2_frame = QtWidgets.QFrame(self.frame_7)
+        self.om2_frame = QtWidgets.QFrame(self.main_params_frame)
         self.om2_frame.setStyleSheet("QFrame{\n"
 "    border-style: solid;\n"
 "    border-width: 2px;\n"
@@ -684,10 +808,10 @@ class Ui_MainWindow(object):
         self.om2_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.om2_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.om2_frame.setObjectName("om2_frame")
-        self.verticalLayout_18 = QtWidgets.QVBoxLayout(self.om2_frame)
-        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_18.setSpacing(0)
-        self.verticalLayout_18.setObjectName("verticalLayout_18")
+        self.verticalLayout_19 = QtWidgets.QVBoxLayout(self.om2_frame)
+        self.verticalLayout_19.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_19.setSpacing(0)
+        self.verticalLayout_19.setObjectName("verticalLayout_19")
         self.om2_frame_legend = QtWidgets.QFrame(self.om2_frame)
         self.om2_frame_legend.setMaximumSize(QtCore.QSize(16777215, 60))
         self.om2_frame_legend.setStyleSheet("QFrame{\n"
@@ -698,11 +822,12 @@ class Ui_MainWindow(object):
         self.om2_frame_legend.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.om2_frame_legend.setFrameShadow(QtWidgets.QFrame.Raised)
         self.om2_frame_legend.setObjectName("om2_frame_legend")
-        self.verticalLayout_17 = QtWidgets.QVBoxLayout(self.om2_frame_legend)
-        self.verticalLayout_17.setObjectName("verticalLayout_17")
+        self.verticalLayout_20 = QtWidgets.QVBoxLayout(self.om2_frame_legend)
+        self.verticalLayout_20.setObjectName("verticalLayout_20")
         self.om2_legend = QtWidgets.QLabel(self.om2_frame_legend)
         self.om2_legend.setMaximumSize(QtCore.QSize(500, 16777215))
         font = QtGui.QFont()
+        font.setFamily("Courier")
         font.setPointSize(14)
         font.setBold(False)
         font.setItalic(False)
@@ -717,10 +842,10 @@ class Ui_MainWindow(object):
 "    color: #ff5533;\n"
 "} ")
         self.om2_legend.setObjectName("om2_legend")
-        self.verticalLayout_17.addWidget(self.om2_legend)
-        self.verticalLayout_18.addWidget(self.om2_frame_legend, 0, QtCore.Qt.AlignHCenter)
-        self.om1_params_frame_2 = QtWidgets.QFrame(self.om2_frame)
-        self.om1_params_frame_2.setStyleSheet("QFrame{\n"
+        self.verticalLayout_20.addWidget(self.om2_legend)
+        self.verticalLayout_19.addWidget(self.om2_frame_legend, 0, QtCore.Qt.AlignHCenter)
+        self.om2_params_frame = QtWidgets.QFrame(self.om2_frame)
+        self.om2_params_frame.setStyleSheet("QFrame{\n"
 "    border-style: solid;\n"
 "    border-width: 0px;\n"
 "    border-color: #2d2d2d;\n"
@@ -736,8 +861,8 @@ class Ui_MainWindow(object):
 "    border-radius: 0px;\n"
 "    border-color: #ff5533;\n"
 "    font:  14px;\n"
-"    padding: 10px 0px;\n"
-"    color:  #ff5533;\n"
+"    padding: px 0px;\n"
+"    color:  #ffffff;\n"
 "}\n"
 "\n"
 "QLabel:hover {\n"
@@ -749,86 +874,393 @@ class Ui_MainWindow(object):
 "   border-style: solid; \n"
 "   color:#ff5533;\n"
 "}")
-        self.om1_params_frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.om1_params_frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.om1_params_frame_2.setObjectName("om1_params_frame_2")
-        self.om2_ves_label = QtWidgets.QLabel(self.om1_params_frame_2)
-        self.om2_ves_label.setGeometry(QtCore.QRect(10, 10, 150, 31))
+        self.om2_params_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.om2_params_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.om2_params_frame.setObjectName("om2_params_frame")
+        self.om2_ves = QtWidgets.QLabel(self.om2_params_frame)
+        self.om2_ves.setGeometry(QtCore.QRect(10, 10, 200, 31))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.om2_ves_label.sizePolicy().hasHeightForWidth())
-        self.om2_ves_label.setSizePolicy(sizePolicy)
-        self.om2_ves_label.setStyleSheet("background-image: url(:/res_files/vesi.png);\n"
+        sizePolicy.setHeightForWidth(self.om2_ves.sizePolicy().hasHeightForWidth())
+        self.om2_ves.setSizePolicy(sizePolicy)
+        self.om2_ves.setStyleSheet("background-image: url(:/resources/vesi.png);\n"
 "background-repeat:none;\n"
 "padding-left: 30px;\n"
 "background-position: center left;")
-        self.om2_ves_label.setObjectName("om2_ves_label")
-        self.om2_vlazh_label = QtWidgets.QLabel(self.om1_params_frame_2)
-        self.om2_vlazh_label.setGeometry(QtCore.QRect(10, 50, 150, 31))
+        self.om2_ves.setObjectName("om2_ves")
+        self.om2_vlazh = QtWidgets.QLabel(self.om2_params_frame)
+        self.om2_vlazh.setGeometry(QtCore.QRect(10, 40, 200, 31))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.om2_vlazh_label.sizePolicy().hasHeightForWidth())
-        self.om2_vlazh_label.setSizePolicy(sizePolicy)
-        self.om2_vlazh_label.setMinimumSize(QtCore.QSize(100, 25))
-        self.om2_vlazh_label.setStyleSheet("background-image: url(:/res_files/vlazhn.png);\n"
+        sizePolicy.setHeightForWidth(self.om2_vlazh.sizePolicy().hasHeightForWidth())
+        self.om2_vlazh.setSizePolicy(sizePolicy)
+        self.om2_vlazh.setMinimumSize(QtCore.QSize(100, 25))
+        self.om2_vlazh.setStyleSheet("background-image: url(:/resources/vlazhn.png);\n"
 "background-repeat:none;\n"
 "padding-left: 30px;\n"
 "background-position: center left;")
-        self.om2_vlazh_label.setObjectName("om2_vlazh_label")
-        self.label_5 = QtWidgets.QLabel(self.om1_params_frame_2)
-        self.label_5.setGeometry(QtCore.QRect(10, 200, 81, 31))
-        self.label_5.setObjectName("label_5")
-        self.verticalLayout_18.addWidget(self.om1_params_frame_2)
+        self.om2_vlazh.setObjectName("om2_vlazh")
+        self.om2_speed = QtWidgets.QLabel(self.om2_params_frame)
+        self.om2_speed.setGeometry(QtCore.QRect(10, 70, 200, 31))
+        self.om2_speed.setMinimumSize(QtCore.QSize(100, 25))
+        self.om2_speed.setStyleSheet("background-image: url(:/resources/speed.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om2_speed.setObjectName("om2_speed")
+        self.verticalLayout_19.addWidget(self.om2_params_frame)
         self.horizontalLayout_9.addWidget(self.om2_frame)
-        self.om3_frame = QtWidgets.QFrame(self.frame_7)
-        self.om3_frame.setStyleSheet("QFrame{\n"
+        self.om4_frame = QtWidgets.QFrame(self.main_params_frame)
+        self.om4_frame.setStyleSheet("QFrame{\n"
 "    border-style: solid;\n"
 "    border-width: 2px;\n"
 "    border-color: #ff5533;\n"
+"}\n"
+"")
+        self.om4_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.om4_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.om4_frame.setObjectName("om4_frame")
+        self.verticalLayout_18 = QtWidgets.QVBoxLayout(self.om4_frame)
+        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_18.setSpacing(0)
+        self.verticalLayout_18.setObjectName("verticalLayout_18")
+        self.om4_frame_legend = QtWidgets.QFrame(self.om4_frame)
+        self.om4_frame_legend.setMaximumSize(QtCore.QSize(16777215, 60))
+        self.om4_frame_legend.setStyleSheet("QFrame{\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-color: #2d2d2d;\n"
 "}")
-        self.om3_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.om3_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.om3_frame.setObjectName("om3_frame")
-        self.horizontalLayout_9.addWidget(self.om3_frame)
-        self.verticalLayout_13.addWidget(self.frame_7)
+        self.om4_frame_legend.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.om4_frame_legend.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.om4_frame_legend.setObjectName("om4_frame_legend")
+        self.verticalLayout_17 = QtWidgets.QVBoxLayout(self.om4_frame_legend)
+        self.verticalLayout_17.setObjectName("verticalLayout_17")
+        self.om4_legend = QtWidgets.QLabel(self.om4_frame_legend)
+        self.om4_legend.setMaximumSize(QtCore.QSize(500, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Courier")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.om4_legend.setFont(font)
+        self.om4_legend.setStyleSheet("QLabel {\n"
+"    color:  #ffffff;\n"
+"}\n"
+"\n"
+"QLabel:hover {\n"
+"\n"
+"    color: #ff5533;\n"
+"} ")
+        self.om4_legend.setObjectName("om4_legend")
+        self.verticalLayout_17.addWidget(self.om4_legend)
+        self.verticalLayout_18.addWidget(self.om4_frame_legend, 0, QtCore.Qt.AlignHCenter)
+        self.om4_params_frame = QtWidgets.QFrame(self.om4_frame)
+        self.om4_params_frame.setStyleSheet("QFrame{\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-color: #2d2d2d;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel {\n"
+"    background-color: rgb(85, 255, 255);\n"
+"                                         \n"
+"    background-color: #2d2d2d;\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-radius: 0px;\n"
+"    border-color: #ff5533;\n"
+"    font:  14px;\n"
+"    padding: px 0px;\n"
+"    color:  #ffffff;\n"
+"}\n"
+"\n"
+"QLabel:hover {\n"
+"    background:  #232323;\n"
+"    color: #ff5533;\n"
+"} \n"
+"QLabel:pressed {                              \n"
+"   background:#2d2d2d;\n"
+"   border-style: solid; \n"
+"   color:#ff5533;\n"
+"}")
+        self.om4_params_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.om4_params_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.om4_params_frame.setObjectName("om4_params_frame")
+        self.om4_ves = QtWidgets.QLabel(self.om4_params_frame)
+        self.om4_ves.setGeometry(QtCore.QRect(10, 10, 200, 31))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.om4_ves.sizePolicy().hasHeightForWidth())
+        self.om4_ves.setSizePolicy(sizePolicy)
+        self.om4_ves.setStyleSheet("background-image: url(:/resources/vesi.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om4_ves.setObjectName("om4_ves")
+        self.om4_vlazh = QtWidgets.QLabel(self.om4_params_frame)
+        self.om4_vlazh.setGeometry(QtCore.QRect(10, 40, 200, 31))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.om4_vlazh.sizePolicy().hasHeightForWidth())
+        self.om4_vlazh.setSizePolicy(sizePolicy)
+        self.om4_vlazh.setMinimumSize(QtCore.QSize(100, 25))
+        self.om4_vlazh.setStyleSheet("background-image: url(:/resources/vlazhn.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om4_vlazh.setObjectName("om4_vlazh")
+        self.om4_speed = QtWidgets.QLabel(self.om4_params_frame)
+        self.om4_speed.setGeometry(QtCore.QRect(10, 70, 200, 31))
+        self.om4_speed.setMinimumSize(QtCore.QSize(100, 25))
+        self.om4_speed.setStyleSheet("background-image: url(:/resources/speed.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om4_speed.setObjectName("om4_speed")
+        self.verticalLayout_18.addWidget(self.om4_params_frame)
+        self.horizontalLayout_9.addWidget(self.om4_frame)
+        self.verticalLayout_13.addWidget(self.main_params_frame)
         self.frame_8 = QtWidgets.QFrame(self.params_page)
         self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_8.setObjectName("frame_8")
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.frame_8)
         self.horizontalLayout_10.setObjectName("horizontalLayout_10")
-        self.om4_params_frame = QtWidgets.QFrame(self.frame_8)
-        self.om4_params_frame.setStyleSheet("QFrame{\n"
+        self.om5_frame = QtWidgets.QFrame(self.frame_8)
+        self.om5_frame.setStyleSheet("QFrame{\n"
 "    border-style: solid;\n"
 "    border-width: 2px;\n"
 "    border-color: #ff5533;\n"
+"}\n"
+"")
+        self.om5_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.om5_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.om5_frame.setObjectName("om5_frame")
+        self.verticalLayout_23 = QtWidgets.QVBoxLayout(self.om5_frame)
+        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_23.setSpacing(0)
+        self.verticalLayout_23.setObjectName("verticalLayout_23")
+        self.om5_frame_legend = QtWidgets.QFrame(self.om5_frame)
+        self.om5_frame_legend.setMaximumSize(QtCore.QSize(16777215, 60))
+        self.om5_frame_legend.setStyleSheet("QFrame{\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-color: #2d2d2d;\n"
 "}")
-        self.om4_params_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.om4_params_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.om4_params_frame.setObjectName("om4_params_frame")
-        self.horizontalLayout_10.addWidget(self.om4_params_frame)
-        self.om5_params_frame = QtWidgets.QFrame(self.frame_8)
+        self.om5_frame_legend.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.om5_frame_legend.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.om5_frame_legend.setObjectName("om5_frame_legend")
+        self.verticalLayout_24 = QtWidgets.QVBoxLayout(self.om5_frame_legend)
+        self.verticalLayout_24.setObjectName("verticalLayout_24")
+        self.om5_legend = QtWidgets.QLabel(self.om5_frame_legend)
+        self.om5_legend.setMaximumSize(QtCore.QSize(500, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Courier")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.om5_legend.setFont(font)
+        self.om5_legend.setStyleSheet("QLabel {\n"
+"    color:  #ffffff;\n"
+"}\n"
+"\n"
+"QLabel:hover {\n"
+"\n"
+"    color: #ff5533;\n"
+"} ")
+        self.om5_legend.setObjectName("om5_legend")
+        self.verticalLayout_24.addWidget(self.om5_legend)
+        self.verticalLayout_23.addWidget(self.om5_frame_legend, 0, QtCore.Qt.AlignHCenter)
+        self.om5_params_frame = QtWidgets.QFrame(self.om5_frame)
         self.om5_params_frame.setStyleSheet("QFrame{\n"
 "    border-style: solid;\n"
-"    border-width: 2px;\n"
+"    border-width: 0px;\n"
+"    border-color: #2d2d2d;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel {\n"
+"    background-color: rgb(85, 255, 255);\n"
+"                                         \n"
+"    background-color: #2d2d2d;\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-radius: 0px;\n"
 "    border-color: #ff5533;\n"
+"    font:  14px;\n"
+"    padding: px 0px;\n"
+"    color:  #ffffff;\n"
+"}\n"
+"\n"
+"QLabel:hover {\n"
+"    background:  #232323;\n"
+"    color: #ff5533;\n"
+"} \n"
+"QLabel:pressed {                              \n"
+"   background:#2d2d2d;\n"
+"   border-style: solid; \n"
+"   color:#ff5533;\n"
 "}")
         self.om5_params_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.om5_params_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.om5_params_frame.setObjectName("om5_params_frame")
-        self.horizontalLayout_10.addWidget(self.om5_params_frame)
-        self.om6_params_frame = QtWidgets.QFrame(self.frame_8)
-        self.om6_params_frame.setStyleSheet("QFrame{\n"
+        self.om5_ves = QtWidgets.QLabel(self.om5_params_frame)
+        self.om5_ves.setGeometry(QtCore.QRect(10, 10, 200, 31))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.om5_ves.sizePolicy().hasHeightForWidth())
+        self.om5_ves.setSizePolicy(sizePolicy)
+        self.om5_ves.setStyleSheet("background-image: url(:/resources/vesi.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om5_ves.setObjectName("om5_ves")
+        self.om5_vlazh = QtWidgets.QLabel(self.om5_params_frame)
+        self.om5_vlazh.setGeometry(QtCore.QRect(10, 40, 200, 31))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.om5_vlazh.sizePolicy().hasHeightForWidth())
+        self.om5_vlazh.setSizePolicy(sizePolicy)
+        self.om5_vlazh.setMinimumSize(QtCore.QSize(100, 25))
+        self.om5_vlazh.setStyleSheet("background-image: url(:/resources/vlazhn.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om5_vlazh.setObjectName("om5_vlazh")
+        self.om5_speed = QtWidgets.QLabel(self.om5_params_frame)
+        self.om5_speed.setGeometry(QtCore.QRect(10, 70, 200, 31))
+        self.om5_speed.setMinimumSize(QtCore.QSize(100, 25))
+        self.om5_speed.setStyleSheet("background-image: url(:/resources/speed.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om5_speed.setObjectName("om5_speed")
+        self.verticalLayout_23.addWidget(self.om5_params_frame)
+        self.horizontalLayout_10.addWidget(self.om5_frame)
+        self.om6_frame = QtWidgets.QFrame(self.frame_8)
+        self.om6_frame.setStyleSheet("QFrame{\n"
 "    border-style: solid;\n"
 "    border-width: 2px;\n"
 "    border-color: #ff5533;\n"
+"}\n"
+"")
+        self.om6_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.om6_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.om6_frame.setObjectName("om6_frame")
+        self.verticalLayout_21 = QtWidgets.QVBoxLayout(self.om6_frame)
+        self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_21.setSpacing(0)
+        self.verticalLayout_21.setObjectName("verticalLayout_21")
+        self.om6_frame_legend = QtWidgets.QFrame(self.om6_frame)
+        self.om6_frame_legend.setMaximumSize(QtCore.QSize(16777215, 60))
+        self.om6_frame_legend.setStyleSheet("QFrame{\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-color: #2d2d2d;\n"
+"}")
+        self.om6_frame_legend.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.om6_frame_legend.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.om6_frame_legend.setObjectName("om6_frame_legend")
+        self.verticalLayout_22 = QtWidgets.QVBoxLayout(self.om6_frame_legend)
+        self.verticalLayout_22.setObjectName("verticalLayout_22")
+        self.om6_legend = QtWidgets.QLabel(self.om6_frame_legend)
+        self.om6_legend.setMaximumSize(QtCore.QSize(500, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Courier")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.om6_legend.setFont(font)
+        self.om6_legend.setStyleSheet("QLabel {\n"
+"    color:  #ffffff;\n"
+"}\n"
+"\n"
+"QLabel:hover {\n"
+"\n"
+"    color: #ff5533;\n"
+"} ")
+        self.om6_legend.setObjectName("om6_legend")
+        self.verticalLayout_22.addWidget(self.om6_legend)
+        self.verticalLayout_21.addWidget(self.om6_frame_legend, 0, QtCore.Qt.AlignHCenter)
+        self.om6_params_frame = QtWidgets.QFrame(self.om6_frame)
+        self.om6_params_frame.setStyleSheet("QFrame{\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-color: #2d2d2d;\n"
+"}\n"
+"\n"
+"\n"
+"QLabel {\n"
+"    background-color: rgb(85, 255, 255);\n"
+"                                         \n"
+"    background-color: #2d2d2d;\n"
+"    border-style: solid;\n"
+"    border-width: 0px;\n"
+"    border-radius: 0px;\n"
+"    border-color: #ff5533;\n"
+"    font:  14px;\n"
+"    padding: px 0px;\n"
+"    color:  #ffffff;\n"
+"}\n"
+"\n"
+"QLabel:hover {\n"
+"    background:  #232323;\n"
+"    color: #ff5533;\n"
+"} \n"
+"QLabel:pressed {                              \n"
+"   background:#2d2d2d;\n"
+"   border-style: solid; \n"
+"   color:#ff5533;\n"
 "}")
         self.om6_params_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.om6_params_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.om6_params_frame.setObjectName("om6_params_frame")
-        self.horizontalLayout_10.addWidget(self.om6_params_frame)
+        self.om6_ves = QtWidgets.QLabel(self.om6_params_frame)
+        self.om6_ves.setGeometry(QtCore.QRect(10, 10, 200, 31))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.om6_ves.sizePolicy().hasHeightForWidth())
+        self.om6_ves.setSizePolicy(sizePolicy)
+        self.om6_ves.setStyleSheet("background-image: url(:/resources/vesi.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om6_ves.setObjectName("om6_ves")
+        self.om6_vlazh = QtWidgets.QLabel(self.om6_params_frame)
+        self.om6_vlazh.setGeometry(QtCore.QRect(10, 40, 200, 31))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.om6_vlazh.sizePolicy().hasHeightForWidth())
+        self.om6_vlazh.setSizePolicy(sizePolicy)
+        self.om6_vlazh.setMinimumSize(QtCore.QSize(100, 25))
+        self.om6_vlazh.setStyleSheet("background-image: url(:/resources/vlazhn.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om6_vlazh.setObjectName("om6_vlazh")
+        self.om6_speed = QtWidgets.QLabel(self.om6_params_frame)
+        self.om6_speed.setGeometry(QtCore.QRect(10, 70, 200, 31))
+        self.om6_speed.setMinimumSize(QtCore.QSize(100, 25))
+        self.om6_speed.setStyleSheet("background-image: url(:/resources/speed.png);\n"
+"background-repeat:none;\n"
+"padding-left: 30px;\n"
+"background-position: center left;")
+        self.om6_speed.setObjectName("om6_speed")
+        self.verticalLayout_21.addWidget(self.om6_params_frame)
+        self.horizontalLayout_10.addWidget(self.om6_frame)
         self.verticalLayout_13.addWidget(self.frame_8)
         self.Pages_Widjet.addWidget(self.params_page)
         self.verticalLayout_5.addWidget(self.Pages_Widjet)
@@ -855,12 +1287,24 @@ class Ui_MainWindow(object):
         self.update_curr_mon.setText(_translate("MainWindow", "Показать"))
         self.selected_data_label_2.setText(_translate("MainWindow", "Диаграммы по прошлому месяцу"))
         self.update_prev_mon.setText(_translate("MainWindow", "Показать"))
+        self.update_freq.setText(_translate("MainWindow", "Частота обновления: 5"))
         self.om1_legend.setText(_translate("MainWindow", "Параметры ОМ1"))
-        self.om1_ves_label.setText(_translate("MainWindow", "Вес: 152"))
-        self.om1_vlazh_label.setText(_translate("MainWindow", "Влажность: 52"))
-        self.label_3.setText(_translate("MainWindow", "TextLabel"))
-        self.om2_legend.setText(_translate("MainWindow", "Параметры ОМ1"))
-        self.om2_ves_label.setText(_translate("MainWindow", "Вес: 152"))
-        self.om2_vlazh_label.setText(_translate("MainWindow", "Влажность: 52"))
-        self.label_5.setText(_translate("MainWindow", "TextLabel"))
-
+        self.om1_ves.setText(_translate("MainWindow", "Вес: "))
+        self.om1_vlazh.setText(_translate("MainWindow", "Влажность: "))
+        self.om1_speed.setText(_translate("MainWindow", "Скорость"))
+        self.om2_legend.setText(_translate("MainWindow", "Параметры ОМ2"))
+        self.om2_ves.setText(_translate("MainWindow", "Вес: "))
+        self.om2_vlazh.setText(_translate("MainWindow", "Влажность: "))
+        self.om2_speed.setText(_translate("MainWindow", "Скорость"))
+        self.om4_legend.setText(_translate("MainWindow", "Параметры ОМ4"))
+        self.om4_ves.setText(_translate("MainWindow", "Вес: "))
+        self.om4_vlazh.setText(_translate("MainWindow", "Влажность:"))
+        self.om4_speed.setText(_translate("MainWindow", "Скорость"))
+        self.om5_legend.setText(_translate("MainWindow", "Параметры ОМ5"))
+        self.om5_ves.setText(_translate("MainWindow", "Вес: "))
+        self.om5_vlazh.setText(_translate("MainWindow", "Влажность: "))
+        self.om5_speed.setText(_translate("MainWindow", "Скорость"))
+        self.om6_legend.setText(_translate("MainWindow", "Параметры ОМ6"))
+        self.om6_ves.setText(_translate("MainWindow", "Вес: "))
+        self.om6_vlazh.setText(_translate("MainWindow", "Влажность: "))
+        self.om6_speed.setText(_translate("MainWindow", "Скорость"))

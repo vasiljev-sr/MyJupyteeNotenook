@@ -1,1 +1,1 @@
-pyuic5 C:\Users\home\Desktop\MyJupyterNotebook\Работа\project\ui\newWindow_animated.ui -o C:\Users\home\Desktop\MyJupyterNotebook\Работа\project\AppMainWindow.py
+pyuic5 C:\Users\Admin\Desktop\gitlab\time_stop_machine\project\ui\newWindow_animated.ui -o C:\Users\Admin\Desktop\gitlab\time_stop_machine\project\AppMainWindow.py
